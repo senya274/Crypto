@@ -1,8 +1,9 @@
 .wrapper {
     /* width: 1010px; */
-    height: 93px;
-    /* background: #F7F9FC; */
-    background: gray;
+    /* width: 1110px;
+    height: 93px; */
+     background: #F7F9FC; 
+    
     border-radius: 12px;
     /* display: flex;
     margin: 0;
@@ -28,9 +29,10 @@
 
 .name::before {
     content: url(/public/coin.png);
-    /*position: relative;
+    
+    position: relative;
     top: 9px;
-    right: 9px;*/
+    right: 4px;
 }
 
 .price {

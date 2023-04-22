@@ -1,11 +1,8 @@
 .wrapper {
-    width: 1440px;
-    height: 866px;
-    /* border-radius: 8px; */
-    display: grid;
-    justify-content: center;
-    align-items: center;
-    justify-items: center;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     height: 100vh;
 }
 .wrapper h2{
     margin-top: 50px;
@@ -16,15 +13,15 @@
     color: #0A1539;
 }
 .content {
-    width: 1110px;
-    height: 674px;
+    width: 100%;
+    max-width: 1110px;
+   
     background: #fff;
 
 }
 
 .text {
     display: flex;
-
     color: #9095A5;
     font-weight: 500;
     font-size: 14px;
@@ -67,7 +64,7 @@
 
 
 .table {
-    display: grid;
+    /* display: grid; */
     /* grid-template-columns: repeat(5, 1fr); */
     /* grid-gap: 10px; */
     
@@ -76,9 +73,11 @@
 
 .row {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(5, 22%);
     align-items: stretch;
     justify-items: stretch;
+    margin-left: 20px;
+    
 }
 
 

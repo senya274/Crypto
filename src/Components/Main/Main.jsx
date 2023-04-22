@@ -3,6 +3,7 @@ import styles from "./Main.module.css";
 import Coins from "../Coins/Coins";
 import { useState, useEffect } from "react";
 import { Button } from "../Button/Button";
+
 const Main = () => {
   const [buy, setBuy] = useState([]);
   const [sell, setSell] = useState([]);
@@ -29,8 +30,10 @@ const Main = () => {
     fetchBuyData();
   }, []);
 
-  console.log(buy);
-  console.log(sell);
+  console.log(sell)
+  console.log(buy)
+  
+
   function handleToggle(isBuy) {
     setIsBuySelected(isBuy);
   }
@@ -53,7 +56,6 @@ const Main = () => {
               <p>Limit/Available</p>
             </div>
             <div className={styles.payment}>
-              
               <p>Payment</p>
             </div>
             <div className={styles.trade}>
@@ -62,8 +64,8 @@ const Main = () => {
             </div>
           </div>
           {isBuySelected
-            ? buy.map((item) => <Coins className={styles.row} buy item={item} />)
-            : sell.map((item) => <Coins className={styles.row} item={item} />)}
+            ? buy.map((item) => <Coins className={styles.row} buy item={item} key={item.coin} />)
+            : sell.map((item) => <Coins className={styles.row} item={item} key={item.coin}  />)}
         </div>
       </div>
     </div>

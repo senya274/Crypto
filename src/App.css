@@ -1,8 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap');
 
 .App{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    
     font-family: 'Montserrat', sans-serif;
 }
