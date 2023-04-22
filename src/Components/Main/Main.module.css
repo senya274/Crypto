@@ -1,0 +1,84 @@
+.wrapper {
+    width: 1440px;
+    height: 866px;
+    /* border-radius: 8px; */
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+}
+.wrapper h2{
+    margin-top: 50px;
+    margin-bottom: 30px;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
+    color: #0A1539;
+}
+.content {
+    width: 1110px;
+    height: 674px;
+    background: #fff;
+
+}
+
+.text {
+    display: flex;
+
+    color: #9095A5;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 22px;
+}
+
+.trade {
+   /* width: 50px;
+    display: flex;
+    margin-left: 26px; */
+ display: flex; 
+ align-items: center;
+/* width: 100px; */
+}
+
+
+.fee{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #00B277;
+    color: white;
+    width: 42px;
+    height: 21px; 
+    border-radius: 4px;
+  
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 13px;
+}
+.payment {
+    /* margin-left: 57px; */
+}
+
+.price {
+    /*width: 190px;
+    margin-left: 2px;*/
+}
+
+
+
+.table {
+    display: grid;
+    /* grid-template-columns: repeat(5, 1fr); */
+    /* grid-gap: 10px; */
+    
+
+}
+
+.row {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    align-items: stretch;
+    justify-items: stretch;
+}
+
+

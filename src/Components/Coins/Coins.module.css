@@ -1,0 +1,81 @@
+.wrapper {
+    /* width: 1010px; */
+    height: 93px;
+    /* background: #F7F9FC; */
+    background: gray;
+    border-radius: 12px;
+    /* display: flex;
+    margin: 0;
+    justify-content: space-around; */
+
+}
+
+.wrapper:nth-child(2n+1) {
+    background: #fff;
+}
+
+
+
+.name {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 17px;
+    padding-top: 7px;
+    /* margin-left: 36px; */
+    color: #0A1539;
+}
+
+.name::before {
+    content: url(/public/coin.png);
+    /*position: relative;
+    top: 9px;
+    right: 9px;*/
+}
+
+.price {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: #0A1539;
+    margin-top: 22px;
+}
+
+.span {
+    color: #9095A5;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+}
+
+.available {
+    font-weight: 500;
+    color: #0A1539;
+    font-size: 14px;
+    line-height: 22px;
+    margin-top: 18px;
+}
+
+.limits {
+    font-weight: 500;
+    color: #0A1539;
+    font-size: 14px;
+    line-height: 22px;
+}
+
+
+.payment {
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 13px;
+    margin-top: 18px;
+}
+
+.border{
+    margin-top: 17px;
+    width: 2px;
+    height: 15px;
+    background-color: orange;
+    margin-right: 5px;
+}
+
