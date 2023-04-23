@@ -1,0 +1,13 @@
+.mobileCards{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.mobileCardsPayment{
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 13px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border-left: 2px solid #FA9751;
+}

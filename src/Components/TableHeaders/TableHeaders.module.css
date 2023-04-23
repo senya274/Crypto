@@ -1,0 +1,36 @@
+.text {
+  color: #9095a5;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+.trade {
+  display: flex;
+  align-items: center;
+}
+
+.fee {
+  text-align: center;
+  background: #00b277;
+  color: white;
+  width: 42px;
+  height: 21px;
+  border-radius: 4px;
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 20px;
+}
+
+@media (min-width: 550px) {
+  .row {
+    display: grid;
+    grid-template-columns: repeat(5, 22%);
+    align-items: stretch;
+    justify-items: stretch;
+    margin-left: 20px;
+  }
+}
+
+@media (max-width: 550px) {
+}

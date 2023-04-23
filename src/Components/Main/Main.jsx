@@ -1,71 +1,75 @@
 import React from "react";
 import styles from "./Main.module.css";
 import Coins from "../Coins/Coins";
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import { Button } from "../Button/Button";
+import TableHeaders from "../TableHeaders/TableHeaders";
+import MobileViewTable from "../MobileViewTable/MobileViewTable";
+import { useDispatch, useSelector } from "react-redux";
+import { setBuy, setIsBuySelected, setSell } from "../../Redux/actions";
 
 const Main = () => {
-  const [buy, setBuy] = useState([]);
-  const [sell, setSell] = useState([]);
-  const [isBuySelected, setIsBuySelected] = useState(true);
+  const dispatch = useDispatch();
+  const { buy, sell, isBuySelected } = useSelector((state) => state);
 
   useEffect(() => {
-    const fetchBuyData = async () => {
-      const response = await fetch(
+    const fetchData = async () => {
+      const buyResponse = await fetch(
         "https://test-d85ac-default-rtdb.europe-west1.firebasedatabase.app/buy.json"
       );
-      const buy = await response.json();
-      setBuy(buy);
-    };
-
-    const fetchSellData = async () => {
-      const response = await fetch(
+      const sellResponse = await fetch(
         "https://test-d85ac-default-rtdb.europe-west1.firebasedatabase.app/sell.json"
       );
-      const sell = await response.json();
-      setSell(sell);
+
+      const buyData = await buyResponse.json();
+      const sellData = await sellResponse.json();
+
+      dispatch(setBuy(buyData));
+      dispatch(setSell(sellData));
     };
 
-    fetchSellData();
-    fetchBuyData();
-  }, []);
+    fetchData();
+  }, [dispatch]);
 
-  console.log(sell)
-  console.log(buy)
-  
+  const handleBuyClick = () => {
+    dispatch(setIsBuySelected(true));
+  };
 
-  function handleToggle(isBuy) {
-    setIsBuySelected(isBuy);
-  }
+  const handleSellClick = () => {
+    dispatch(setIsBuySelected(false));
+  };
 
   return (
     <div className={styles.wrapper}>
       <div className={styles.content}>
-        <Button onClick={() => handleToggle(true)} content="Buy" variant="contained"/>
-        <Button onClick={() => handleToggle(false)} content="Sell" variant="contained" color="secondary" />
+        <Button
+          onClick={() => handleBuyClick(true)}
+          content="Buy"
+          variant={isBuySelected ? "contained" : "outlined"}
+        />
+        <Button
+          onClick={() => handleSellClick(false)}
+          content="Sell"
+          variant={isBuySelected ? "outlined" : "con"}
+          color="secondary"
+        />
         <h2>{isBuySelected ? "Buy from the User" : "Sell to the User"}</h2>
         <div className={styles.table}>
-          <div className={`${styles.text} ${styles.row}`}>
-            <div>
-              <p>Coin</p>
-            </div>
-            <div className={styles.price}>
-              <p>Price</p>
-            </div>
-            <div className={styles.available}>
-              <p>Limit/Available</p>
-            </div>
-            <div className={styles.payment}>
-              <p>Payment</p>
-            </div>
-            <div className={styles.trade}>
-              Trade <span className={styles.fee}> 0 Fee</span>
-              
-            </div>
-          </div>
+          <TableHeaders />
           {isBuySelected
-            ? buy.map((item) => <Coins className={styles.row} buy item={item} key={item.coin} />)
-            : sell.map((item) => <Coins className={styles.row} item={item} key={item.coin}  />)}
+            ? buy.map((item) => (
+                <Coins className={styles.row} buy item={item} key={item.coin} />
+              ))
+            : sell.map((item) => (
+                <Coins className={styles.row} item={item} key={item.coin} />
+              ))}
+        </div>
+        <div className={styles.mobileTable}>
+          {isBuySelected ? (
+            <MobileViewTable currencies={buy} isBuy />
+          ) : (
+            <MobileViewTable currencies={sell} />
+          )}
         </div>
       </div>
     </div>

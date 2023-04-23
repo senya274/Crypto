@@ -19,13 +19,13 @@ const resolveStyles = ({ variant, color, fullWidth }) => {
 
   switch (color) {
     case "primary":
-      colorClass = styles.primary;
+      colorClass = variant === "outlined" ? styles.primaryOutlined: styles.primaryContained ;
       break;
     case "secondary":
-      colorClass = styles.secondary;
+      colorClass = variant === "outlined" ? styles.secondaryOutlined: styles.secondaryContained ;
       break;
     default:
-      colorClass = styles.primary;
+      colorClass = styles.primaryContained;
       break;
   }
 

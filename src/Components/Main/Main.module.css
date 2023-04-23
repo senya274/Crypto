@@ -2,7 +2,7 @@
      display: flex;
      justify-content: center;
      align-items: center;
-     height: 100vh;
+     /* height: 100vh; */
 }
 .wrapper h2{
     margin-top: 50px;
@@ -17,7 +17,6 @@
     max-width: 1110px;
    
     background: #fff;
-
 }
 
 .text {
@@ -29,12 +28,10 @@
 }
 
 .trade {
-   /* width: 50px;
-    display: flex;
-    margin-left: 26px; */
+ 
  display: flex; 
  align-items: center;
-/* width: 100px; */
+
 }
 
 
@@ -52,24 +49,6 @@
     font-size: 11px;
     line-height: 13px;
 }
-.payment {
-    /* margin-left: 57px; */
-}
-
-.price {
-    /*width: 190px;
-    margin-left: 2px;*/
-}
-
-
-
-.table {
-    /* display: grid; */
-    /* grid-template-columns: repeat(5, 1fr); */
-    /* grid-gap: 10px; */
-    
-
-}
 
 .row {
     display: grid;
@@ -77,7 +56,27 @@
     align-items: stretch;
     justify-items: stretch;
     margin-left: 20px;
-    
+    margin-top: 15px;
+}
+
+@media (min-width: 550px) {
+    .mobileTable{ 
+        display: none;
+    }
 }
 
 
+@media (max-width: 550px) {
+    .table {
+        display: none;
+    }
+    .content{
+        margin-left: 18px;
+    }
+}
+
+.mobileCardContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}

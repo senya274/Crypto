@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import styles from "./Coins.module.css";
 import { Button } from "../Button/Button";
 
-const getPrice = (price) => {
+export const getPrice = (price) => {
   if (price < 1000) return price
   
   const splittedPrice = price.toString().split('').reverse()
@@ -21,7 +21,7 @@ const CoinButton = ({buy, availableCoin}) => {
   const content = buy ? `Buy ${availableCoin}` : `Sell ${availableCoin}`
   const color = buy ? "primary" : "secondary"
 
-  return <div style={{width: "114px", marginTop: "16px", marginRight: "20px"}}><Button content={content} variant="contained" color={color} fullWidth /></div>
+  return <div className={styles.coinbutton}><Button content={content} variant="contained" color={color} fullWidth /></div>
 }
 
 const Coins = ({ className, buy, item }) => {
@@ -32,12 +32,13 @@ const Coins = ({ className, buy, item }) => {
 
       <p className={styles.price}>
         {getPrice(item.price)}
+        &nbsp;
         {item.coin}
       </p>
       <div>
         <p className={styles.available}>
           <span className={styles.span}>Avaliable</span>{" "}
-          {item.available} {" "}
+          {getPrice(item.available)} {" "}
           {item.availableCoin}
         </p>
         <p className={styles.limits}>
@@ -48,7 +49,7 @@ const Coins = ({ className, buy, item }) => {
           {item.coin}
         </p>
       </div>
-      <div style={{display: "flex"}}>
+      <div className={styles.payment}>
         <div className={styles.border}></div>
         <p className={styles.payment}>{item.payment}</p>
       </div>
