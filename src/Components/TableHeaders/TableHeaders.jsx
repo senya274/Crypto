@@ -17,7 +17,7 @@ const TableHeaders = () => {
           <p>Payment</p>
         </div>
         <div className={styles.trade}>
-          Trade &nbsp; <span className={styles.fee}> 0 Fee</span>
+          Trade &nbsp; <span className={styles.tradePayments}> 0 Fee</span>
         </div>
       </div>
     );
