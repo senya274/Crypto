@@ -4,7 +4,7 @@ import { Button } from "../Button/Button";
 import Divider from "../Divider/Divider";
 import styles from "./MobileViewTable.module.css";
 const MobileViewTable = ({ currencies, isBuy }) => {
-    
+
   const getMobileCards = () => {
       return currencies.map((item) => (
         <div className={styles.mobileCardContainer}>
@@ -25,6 +25,7 @@ const MobileViewTable = ({ currencies, isBuy }) => {
         </div>
       ));
     };
+    
     return (
       <div className={styles.mobileCards}>
         {getMobileCards()}
