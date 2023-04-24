@@ -22,7 +22,7 @@
   line-height: 20px;
 }
 
-@media (min-width: 550px) {
+@media (min-width: 600px) {
   .row {
     display: grid;
     grid-template-columns: repeat(5, 22%);
@@ -32,5 +32,5 @@
   }
 }
 
-@media (max-width: 550px) {
+@media (max-width: 600px) {
 }

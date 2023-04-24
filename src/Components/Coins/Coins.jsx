@@ -37,12 +37,12 @@ const Coins = ({ className, buy, item }) => {
       </p>
       <div>
         <p className={styles.available}>
-          <span className={styles.span}>Avaliable</span>{" "}
+          <span className={styles.spanAvaliable}>Avaliable</span>{" "}
           {getPrice(item.available)} {" "}
           {item.availableCoin}
         </p>
         <p className={styles.limits}>
-          <span className={styles.span}>Limit</span>{" "}
+          <span className={styles.spanLimit}>Limit</span>{" "}
          
           {item.limits[0]}-
           {item.limits[1]}{" "}

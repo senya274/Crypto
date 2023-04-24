@@ -36,11 +36,19 @@
     margin-top: 20px;
 }
 
-.span {
+.spanLimit{
     color: #9095A5;
     font-weight: 400;
     font-size: 14px;
     line-height: 22px;
+    padding-right: 25px;
+}
+.spanAvaliable{
+    color: #9095A5;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+  
 }
 
 .available {
@@ -81,7 +89,7 @@ margin-top: 16px;
 margin-right: 20px;
 }
 
-@media (max-width: 550px) {
+@media (max-width: 600px) {
    .wrapper{
     width: 320px;
     height: 130px;
