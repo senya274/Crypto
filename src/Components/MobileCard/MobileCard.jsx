@@ -10,17 +10,14 @@ const Coin = () => {
 const MobileCard = ({ action, item }) => {
   const { available, limits, payment, coin, price } = item;
 
-
-
   
-  console.log(item);
 
   return (
     <div className={styles.container}>
       <div className={styles.header}>
-      <Coin />
+        <Coin />
         <p className={styles.headerText}>
-         {getPrice(price)} {coin}
+          {getPrice(price)} {coin}
         </p>
       </div>
       <div className={styles.dividerContainer}>
@@ -37,9 +34,7 @@ const MobileCard = ({ action, item }) => {
             <p className={styles.text}>{limits.join(" - ")}</p>
           </div>
         </div>
-        <div className={styles.actionContainer}>
-          {action}
-        </div>
+        <div className={styles.actionContainer}>{action}</div>
       </div>
     </div>
   );

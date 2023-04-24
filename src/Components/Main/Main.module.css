@@ -2,7 +2,7 @@
      display: flex;
      justify-content: center;
      align-items: center;
-     /* height: 100vh; */
+    
 }
 .wrapper h2{
     margin-top: 50px;
@@ -15,8 +15,8 @@
 .content {
     width: 100%;
     max-width: 1110px;
-   
     background: #fff;
+    margin-top: 40px;
 }
 
 .text {
@@ -35,20 +35,6 @@
 }
 
 
-.fee{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: #00B277;
-    color: white;
-    width: 42px;
-    height: 21px; 
-    border-radius: 4px;
-  
-    font-weight: 400;
-    font-size: 11px;
-    line-height: 13px;
-}
 
 .row {
     display: grid;
