@@ -10,8 +10,6 @@ const Coin = () => {
 const MobileCard = ({ action, item }) => {
   const { available, limits, payment, coin, price } = item;
 
-  
-
   return (
     <div className={styles.container}>
       <div className={styles.header}>
@@ -26,8 +24,8 @@ const MobileCard = ({ action, item }) => {
       <div className={styles.dataActionsContainer}>
         <div className={styles.dataContainer}>
           <div className={styles.rowContainer}>
-            <p className={styles.subtitle}>Amount</p>
-            <p className={styles.text}>{available}</p>
+            <p className={styles.subtitle}> Amount</p>
+            <p className={styles.text}>{getPrice(available)}</p>
           </div>
           <div className={styles.rowContainer}>
             <p className={styles.subtitle}>Limit</p>
