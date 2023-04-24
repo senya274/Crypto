@@ -18,7 +18,7 @@ const MobileCard = ({ action, item }) => {
   return (
     <div className={styles.container}>
       <div className={styles.header}>
-        <Coin />
+      <Coin />
         <p className={styles.headerText}>
          {getPrice(price)} {coin}
         </p>

@@ -8,7 +8,7 @@ const MobileViewTable = ({ currencies, isBuy }) => {
   const getMobileCards = () => {
       return currencies.map((item) => (
         <div className={styles.mobileCardContainer}>
-          <p>{item.coin}</p>
+          <p className={styles.mobileCardContainerCoinName}>{item.coin}</p>
         <MobileCard
           key={item.coin}
           item={item}

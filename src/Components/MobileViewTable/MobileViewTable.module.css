@@ -10,4 +10,13 @@
     margin-top: 15px;
     margin-bottom: 15px;
     border-left: 2px solid #FA9751;
+    padding-left: 5px;
+}
+
+.mobileCardContainerCoinName{
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: #0A1539;
+    margin-bottom: 14.75px;
 }

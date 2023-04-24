@@ -55,6 +55,7 @@ color: #0A1539;
 .dataContainer {
     display: flex;
     flex-direction: column;
+    
 }
 
 .rowContainer {
