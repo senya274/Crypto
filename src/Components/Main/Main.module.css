@@ -1,10 +1,11 @@
 .wrapper {
-     display: flex;
-     justify-content: center;
-     align-items: center;
-    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 }
-.wrapper h2{
+
+.wrapper h2 {
     margin-top: 50px;
     margin-bottom: 30px;
     font-weight: 600;
@@ -12,6 +13,7 @@
     line-height: 29px;
     color: #0A1539;
 }
+
 .content {
     width: 100%;
     max-width: 1110px;
@@ -28,9 +30,9 @@
 }
 
 .trade {
- 
- display: flex; 
- align-items: center;
+
+    display: flex;
+    align-items: center;
 
 }
 
@@ -46,7 +48,7 @@
 }
 
 @media (min-width: 550px) {
-    .mobileTable{ 
+    .mobileTable {
         display: none;
     }
 }
@@ -56,9 +58,8 @@
     .table {
         display: none;
     }
-    .content{
-        margin-left: 18px;
-    }
+
+    
 }
 
 .mobileCardContainer {
